@@ -1,15 +1,31 @@
+
 # knovi_call
 
-A new Flutter project.
+knovi_call is the One-to-One video calling using [Vonage Video API](https://tokbox.com/developer/guides/basics/).
 
-## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Usage
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Create [Vonage Account](https://tokbox.com/account/user/signup) for Creating the video session.
+- Add `knovi_call` as dependency in `pubspec.yaml` file.
+- Generate [Session ID](https://tokbox.com/developer/guides/create-session/) and [Token](https://tokbox.com/developer/guides/create-session/) From Vonage Project DashBoard.
 
+
+```dart
+import 'package:knovi_call/knovi_call.dart';
+
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: KnoviCall(
+        apiKey: 'YOUR_VONAGE_API_KEY',
+        sessionId: "VIDEO_SESSION_ID",
+        token: "VIDEO_SESSION_ID",
+      ),
+    );
+  }
+```
+
+
+## Documentation
+
+[Vonage Video API](https://tokbox.com/developer/guides/basics/)
